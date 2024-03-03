@@ -1,0 +1,117 @@
+/*# sourceMappingURL=style.css.map */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.page1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+}
+
+.ball{
+    height: 10px;
+    width: 150px;
+}
+
+
+.images{
+    width: 30%;
+    height: 20%;
+    top: 12px;
+    left: 35%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.images img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 3s;
+}
+.images:hover .ball{
+    top: 45%;
+
+}
+
+.images:hover .logo{
+    bottom: 40px;
+}
+
+
+@keyframes thunder {
+    0% { transform: translateY(-10px); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(-10px); }
+}
+
+
+.ball {
+    transition: transform 0.3s ease;
+}
+
+.ball:hover {
+    animation: thunder 0.5s infinite;
+    transform: translateY(0); 
+}
+
+
+
+
+
+
+.container{
+    position: absolute;
+    width: 90%;
+    height: 90vh;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.card {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+
+.pokemon-id {
+    font-weight: bold;
+    font-size: 18px; 
+    color: #333; 
+}
+
+.pokemon-name {
+    font-size: 16px; 
+    color: #666; 
+}
+
+.pokemon-thumbnail {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.pokemon-type {
+    font-style: italic;
+    color: #888; 
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}

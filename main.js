@@ -27,3 +27,4 @@ function searchPokemon() {
     let filteredData = data.filter(pokemon => pokemon.type.toLowerCase().includes(searchInput));
     pokemonCard(filteredData);
 }
+

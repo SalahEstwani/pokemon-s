@@ -62,10 +62,6 @@
 }
 
 
-
-
-
-
 .container{
     position: absolute;
     width: 90%;
@@ -98,6 +94,7 @@
 .pokemon-name {
     font-size: 16px; 
     color: #666; 
+    font-weight: bolder;
 }
 
 .pokemon-thumbnail {
@@ -110,8 +107,56 @@
 .pokemon-type {
     font-style: italic;
     color: #888; 
+    font-weight: bold;
 }
 
 .card:hover {
     transform: translateY(-5px);
+}
+
+.id-container {
+    background-color: #0088ff; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    
+}
+
+.name-container {
+    background-color: #ba66ff; 
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+
+
+.type-container {
+    background-color: #e299ff; 
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+.search-container {
+    display: inline-block;
+}
+
+input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
 }

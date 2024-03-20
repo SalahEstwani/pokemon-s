@@ -21,10 +21,63 @@ function pokemonCard() {
 
 pokemonCard()
 
+//let searchBtn = document.getElementById("btn")
+//searchBtn.addEventListener("click", searchPokemon)
+//function searchPokemon() {
+  //  let searchInput = document.getElementById("searchInput").value.toLowerCase();
+    //let filteredData = data.filter(item => {item.type.toLowerCase().includes(searchInput)});
+    //pokemonCard(filteredData);
+    
+
+//  function nested() {
+//    for (let j = 0; j < data.length; j++) {
+//        const element = data[j];
+        
+//        for (let d = 0; d = element.length; d++) {
+//            const content = element[d];
+            
+//        }
+//    }
+//  }
+    
+
+
+let searchBtn = document.getElementById("btn");
+
+
+searchBtn.addEventListener("click", searchPokemon);
+
 
 function searchPokemon() {
     let searchInput = document.getElementById("searchInput").value.toLowerCase();
-    let filteredData = data.filter(pokemon => pokemon.type.toLowerCase().includes(searchInput));
+  
+    let filteredData = data.map(Element => {
+         const listOfTypes = Element.type
+
+
+
+         
+         listOfTypes.map(type =>{
+           if (type.includes(searchInput)) {
+            hasMoreThanOneType = true
+            break;
+          
+            
+           }
+         }
+            )
+
+
+            
+
+        // return pokemon.type.some(type => {
+        //    if (typeof type === 'string') { 
+        //         return type.toLowerCase().includes(searchInput);
+        //     }
+        //     return false; 
+        // });
+    });
+
+  
     pokemonCard(filteredData);
 }
-
